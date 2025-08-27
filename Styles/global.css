@@ -16,14 +16,26 @@
   --font-family: "Poppins", sans-serif;
   --text-lg: bold 32px/125% var(--font-family);
   --text: 16px/1.5 var(--font-family);
-  --text-md: 14px/175% var(--font-family);
-  --text-sm: 12px/175% var(--font-family);
+  --text-md: 14px/170% var(--font-family);
+  --text-sm: 12px/170% var(--font-family);
 }
 
 body {
   font: var(--text);
   color: var(--text-color-secondary);
   background-color: var(--background-color);
+}
+
+#profile {
+  display: flex;
+  align-items: center;   /* centraliza verticalmente */
+  gap: 16px;             /* espaço entre a foto e o texto */
+}
+
+#profile img {
+  width: 120px;    /* tamanho da imagem */
+  height: auto;    /* mantém proporção */
+  border-radius: 50%; /* opcional, deixa redonda */
 }
 
 a {

@@ -1,0 +1,58 @@
+header {
+  padding-block: 32px;
+  font: var(--text-md);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#profile {
+  display: flex;
+  align-items: flex-start;  /* alinha verticalmente no topo */
+  justify-content: space-between; /* espalha texto e info para as extremidades */
+  gap: 32px; /* espaço entre foto, texto e info */
+  width: 100%; /* garante que ocupe toda a largura do container */
+}
+
+#profile > div {
+  max-width: 384px;
+}
+
+#profile h2 {
+  font: var(--text-lg);
+  color: var(--text-color-primary);
+  margin-bottom: 8px;
+}
+
+.profile-text {
+  max-width: 400px; /* largura da bio */
+}
+
+#profile img {
+  width: 120px;
+  border-radius: 50%;
+}
+
+/* lista de info ao lado do texto */
+#info {
+  display: flex;
+  flex-direction: column; /* mantém os itens em coluna */
+  list-style: none;
+  padding: 0;
+  margin: 0; /* tira espaçamento extra */
+  margin-left: auto; /* empurra a lista pro outro lado da página */
+}
+
+#info li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#info img {
+  width: 18px;
+  height: 18px;
+}
