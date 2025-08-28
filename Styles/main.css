@@ -1,14 +1,14 @@
-/* MAIN - GRID DE IMAGENS DE VIAGEM */
 main {
   display: flex;
-  flex-wrap: wrap; /* permite múltiplas linhas */
-  gap: 8px; /* espaço entre imagens */
+  flex-wrap: wrap;
+  gap: 8px;
   margin-top: 24px;
+  justify-content: center; /* centraliza as imagens */
 }
 
 /* DESKTOP - 4 imagens por linha */
 main img {
-  width: calc(25% - 6px); 
+  width: calc(25% - 6px);
   height: auto;
   border-radius: 12px;
   object-fit: cover;
@@ -17,22 +17,26 @@ main img {
 /* TABLET - 3 imagens por linha */
 @media (max-width: 1024px) {
   main img {
-    width: calc(33.33% - 6px); 
+    width: calc(33.33% - 6px);
   }
 }
 
 /* CELULAR GRANDE - 2 imagens por linha */
 @media (max-width: 768px) {
   main img {
-    width: calc(50% - 4px); 
+    width: calc(50% - 4px);
   }
 }
 
 /* CELULAR PEQUENO - 3 imagens por linha */
 @media (max-width: 480px) {
+  main {
+    gap: 4px; /* menos espaço entre imagens */
+    padding: 0 4px; /* padding menor */
+  }
+
   main img {
-    width: calc(33.33% - 4px); /* 3 imagens por linha */
-    display: block;
+    width: calc(33.33% - 4px);
     margin: 0;
   }
 }
