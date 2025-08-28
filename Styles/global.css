@@ -58,6 +58,112 @@ a:hover {
   background-color: var(--surface-color);
 }
 
+/* ========= BASE ========= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color-primary, #333);
+  background-color: var(--bg-surface-color, #fafafa);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px; /* limite em telas grandes */
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ========= NAVBAR ========= */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+#logo img {
+  width: 120px;
+}
+
+#primary-menu {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+#primary-menu li a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* ========= HEADER / PROFILE ========= */
+header {
+  padding-block: 32px;
+}
+
+#profile {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  width: 100%;
+}
+
+#profile img {
+  width: 120px;
+  border-radius: 50%;
+}
+
+.profile-text {
+  max-width: 400px;
+}
+
+#profile h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+#profile p {
+  font-size: 14px;
+  color: #555;
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-left: auto;
+  gap: 8px;
+}
+
+#info li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #444;
+}
+
+#info img {
+  width: 18px;
+  height: 18px;
+}
+
 /* ========= RESPONSIVIDADE ========= */
 
 /* Tablet */
@@ -81,6 +187,32 @@ a:hover {
     flex-direction: column;
     gap: 12px;
   }
+
+  #primary-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  #profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-text {
+    max-width: 100%;
+  }
+
+  #info {
+    margin-left: 0;
+    margin-top: 16px;
+    align-items: center;
+  }
+
+  #profile img {
+    width: 100px; /* menor no celular */
+  }
 }
 
 /* Celulares bem pequenos */
@@ -89,3 +221,20 @@ a:hover {
     flex-direction: column;
     gap: 8px;
   }
+
+  #profile img {
+    width: 80px;
+  }
+
+  #profile h3 {
+    font-size: 18px;
+  }
+
+  #profile p {
+    font-size: 13px;
+  }
+
+  #info li {
+    font-size: 13px;
+  }
+}
