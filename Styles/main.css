@@ -27,8 +27,8 @@ main {
   font-size: 14px;
   color: #333;
   text-align: center;
-  white-space: normal;  /* permite quebrar linha */
-  word-wrap: break-word; /* força quebra de palavras grandes */
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 /* DESKTOP - 4 imagens por linha */
@@ -39,4 +39,27 @@ main {
 }
 
 /* TABLET - 3 imagens por linha */
-@med
+@media (max-width: 1024px) and (min-width: 769px) {
+  .image-box {
+    width: 32%;
+  }
+
+  .image-box img {
+    height: 280px;
+  }
+}
+
+/* CELULAR - 3 imagens por linha */
+@media (max-width: 768px) {
+  .image-box {
+    width: 31%;
+  }
+
+  .image-box img {
+    height: 220px; /* altura ajustada para celular */
+  }
+
+  .caption-below {
+    font-size: 12px;
+  }
+}
