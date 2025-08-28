@@ -27,6 +27,8 @@ main {
   font-size: 14px;
   color: #333;
   text-align: center;
+  white-space: normal;  /* permite quebrar linha */
+  word-wrap: break-word; /* força quebra de palavras grandes */
 }
 
 /* DESKTOP - 4 imagens por linha */
@@ -37,42 +39,4 @@ main {
 }
 
 /* TABLET - 3 imagens por linha */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .image-box {
-    width: 32%;
-  }
-
-  .image-box img {
-    height: 280px; /* altura ajustada para tablet */
-  }
-}
-
-/* CELULAR GRANDE - 2 imagens por linha */
-@media (max-width: 768px) and (min-width: 481px) {
-  .image-box {
-    width: 48%;
-  }
-
-  .image-box img {
-    height: 220px; /* altura ajustada para celular grande */
-  }
-
-  .caption-below {
-    font-size: 12px;
-  }
-}
-
-/* CELULAR PEQUENO - 3 imagens por linha */
-@media (max-width: 480px) {
-  .image-box {
-    width: 31%;
-  }
-
-  .image-box img {
-    height: 200px; /* altura ajustada para celular pequeno */
-  }
-
-  .caption-below {
-    font-size: 12px;
-  }
-}
+@med
