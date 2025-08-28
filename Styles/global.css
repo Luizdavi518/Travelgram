@@ -57,3 +57,9 @@ a:hover {
 .bg-surface-color {
   background-color: var(--surface-color);
 }
+
+@media (max-width: 600px) {
+  .produto img {
+    width: 100%;   /* A imagem ocupa a largura da tela */
+    max-width: 350px; /* mas não passa de 350px */
+  }
