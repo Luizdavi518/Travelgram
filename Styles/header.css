@@ -4,9 +4,9 @@ header {
 }
 
 header .container {
-  display: flex; /* corrigido */
+  display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* topo alinhado */
+  align-items: flex-start;
   width: 100%;
 }
 
@@ -33,21 +33,18 @@ header .container {
 }
 
 #profile img {
-  width: 120px;   /* tamanho desktop */
-  height: auto;   /* mantém proporção */
+  width: 120px;
+  height: auto;
   object-fit: cover;
   border-radius: 50%;
 }
 
-/* lista de info ao lado do texto */
 #info {
   display: flex;
   flex-direction: column;
   gap: 8px;
   list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-left: auto; /* mantém a lista à direita */
+  margin-left: auto; 
   justify-content: center;
 }
 
@@ -62,7 +59,7 @@ header .container {
   height: 18px;
 }
 
-/* RESPONSIVIDADE: só reduzir tamanho, sem mudar layout */
+/* RESPONSIVIDADE - mantém layout, só reduz tamanho */
 @media (max-width: 768px) {
   #profile img {
     width: 80px;
