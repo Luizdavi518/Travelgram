@@ -164,77 +164,26 @@ header {
   height: 18px;
 }
 
-/* ========= RESPONSIVIDADE ========= */
-
-/* Tablet */
-@media (max-width: 992px) {
-  #primary-menu {
-    gap: 16px;
-  }
-
-  #profile {
-    gap: 24px;
-  }
-
-  #logo img {
-    width: 100px;
-  }
-}
-
-/* Celular */
+/* RESPONSIVIDADE: apenas reduz tamanho de imagens/textos */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  #primary-menu {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  #profile {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .profile-text {
-    max-width: 100%;
-  }
-
-  #info {
-    margin-left: 0;
-    margin-top: 16px;
-    align-items: center;
-  }
-
   #profile img {
-    width: 100px; /* menor no celular */
-  }
-}
-
-/* Celulares bem pequenos */
-@media (max-width: 480px) {
-  #primary-menu {
-    flex-direction: column;
-    gap: 8px;
+    width: 80px;  /* menor no celular */
   }
 
-  #profile img {
-    width: 80px;
+  .profile-text h3 {
+    font-size: 16px;  /* reduz título */
   }
 
-  #profile h3 {
-    font-size: 18px;
-  }
-
-  #profile p {
-    font-size: 13px;
+  .profile-text p {
+    font-size: 12px;  /* reduz texto da bio */
   }
 
   #info li {
-    font-size: 13px;
+    font-size: 12px; /* reduz informações */
+  }
+
+  #info img {
+    width: 14px; /* reduz ícones */
+    height: 14px;
   }
 }
