@@ -1,6 +1,7 @@
 header {
   padding-block: 32px;
   font: var(--text-md);
+  width: 80%;
 }
 
 header .container {
