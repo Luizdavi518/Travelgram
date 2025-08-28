@@ -58,8 +58,20 @@ a:hover {
   background-color: var(--surface-color);
 }
 
-@media (max-width: 600px) {
-  .produto img {
-    width: 100%;   /* A imagem ocupa a largura da tela */
-    max-width: 350px; /* mas não passa de 350px */
+@media (max-width: 768px) {
+  #profile {
+    flex-direction: column;   /* empilha ao invés de lado a lado */
+    align-items: center;
+    text-align: center;
   }
+
+  #info {
+    margin-left: 0;  /* reseta o margin auto */
+    margin-top: 16px;
+    align-items: center;
+  }
+
+  nav ul {
+    gap: 12px; /* diminui espaçamento do menu */
+  }
+}
