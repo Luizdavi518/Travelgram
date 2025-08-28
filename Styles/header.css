@@ -17,6 +17,7 @@ header .container {
   width: 100%; /* garante que ocupe toda a largura do container */
 }
 
+
 #profile > div {
   max-width: 384px;
 }
@@ -40,10 +41,12 @@ header .container {
 #info {
   display: flex;
   flex-direction: column; /* mantém os itens em coluna */
+  gap: 10px;
   list-style: none;
   padding: 0;
   margin: 0; /* tira espaçamento extra */
   margin-left: auto; /* empurra a lista pro outro lado da página */
+  justify-content: center;
 }
 
 #info li {
