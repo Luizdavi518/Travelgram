@@ -3,12 +3,13 @@ main {
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 24px;
-  justify-content: center; /* centraliza as imagens */
+  justify-content: center; /* centraliza imagens */
+  padding: 0 8px; /* padding menor para celular */
 }
 
 /* DESKTOP - 4 imagens por linha */
 main img {
-  width: calc(25% - 6px);
+  width: 23%; /* 4 imagens com gap */
   height: auto;
   border-radius: 12px;
   object-fit: cover;
@@ -17,26 +18,20 @@ main img {
 /* TABLET - 3 imagens por linha */
 @media (max-width: 1024px) {
   main img {
-    width: calc(33.33% - 6px);
+    width: 32%; /* 3 imagens com gap */
   }
 }
 
 /* CELULAR GRANDE - 2 imagens por linha */
 @media (max-width: 768px) {
   main img {
-    width: calc(50% - 4px);
+    width: 48%; /* 2 imagens com gap */
   }
 }
 
 /* CELULAR PEQUENO - 3 imagens por linha */
 @media (max-width: 480px) {
-  main {
-    gap: 4px; /* menos espaço entre imagens */
-    padding: 0 4px; /* padding menor */
-  }
-
   main img {
-    width: calc(33.33% - 4px);
-    margin: 0;
+    width: 31%; /* 3 imagens por linha com gap */
   }
 }
