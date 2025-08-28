@@ -58,20 +58,34 @@ a:hover {
   background-color: var(--surface-color);
 }
 
-@media (max-width: 768px) {
+/* ========= RESPONSIVIDADE ========= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  #primary-menu {
+    gap: 16px;
+  }
+
   #profile {
-    flex-direction: column;   /* empilha ao invés de lado a lado */
-    align-items: center;
-    text-align: center;
+    gap: 24px;
   }
 
-  #info {
-    margin-left: 0;  /* reseta o margin auto */
-    margin-top: 16px;
-    align-items: center;
-  }
-
-  nav ul {
-    gap: 12px; /* diminui espaçamento do menu */
+  #logo img {
+    width: 100px;
   }
 }
+
+/* Celular */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* Celulares bem pequenos */
+@media (max-width: 480px) {
+  #primary-menu {
+    flex-direction: column;
+    gap: 8px;
+  }
