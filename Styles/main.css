@@ -1,62 +1,39 @@
-/* MAIN - GRID DE IMAGENS DE VIAGEM */
 main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 24px;
-  justify-content: center;
-  padding: 0 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  padding-block: 24px;
 }
 
 .image-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 16px;
 }
 
 .image-box img {
   width: 100%;
-  height: 320px; /* altura estilo post em destaque */
-  border-radius: 12px;
-  object-fit: cover; /* mantém corte proporcional */
+  height: 320px; /* altura tipo Instagram */
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .caption-below {
-  margin-top: 4px;
+  margin-top: 8px;
   font-size: 14px;
-  color: #333;
+  color: #555;
   text-align: center;
-  white-space: normal;
-  word-wrap: break-word;
 }
 
-/* DESKTOP - 4 imagens por linha */
-@media (min-width: 1025px) {
-  .image-box {
-    width: 23%;
-  }
-}
-
-/* TABLET - 3 imagens por linha */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .image-box {
-    width: 32%;
-  }
-
-  .image-box img {
-    height: 280px;
-  }
-}
-
-/* CELULAR - 3 imagens por linha */
+/* RESPONSIVIDADE CELULAR */
 @media (max-width: 768px) {
-  .image-box {
-    width: 31%;
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
   }
 
   .image-box img {
-    height: 220px; /* altura ajustada para celular */
+    height: 180px;
   }
 
   .caption-below {
