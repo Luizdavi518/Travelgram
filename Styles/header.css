@@ -1,13 +1,14 @@
 header {
-  padding-block: 32px;
+  padding-block: 32px 16px;
   font: var(--text-md);
   
 }
 
 header .container {
-  display: flex;
+  display: column;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 #profile {
@@ -44,7 +45,7 @@ header .container {
 #info {
   display: flex;
   flex-direction: column; /* mantém os itens em coluna */
-  gap: 10px;
+  gap: 8px;
   list-style: none;
   padding: 0;
   margin: 0; /* tira espaçamento extra */
