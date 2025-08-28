@@ -1,12 +1,32 @@
 main {
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  padding-block: 24px;
+  flex-wrap: wrap; /* permite várias imagens lado a lado */
+  gap: 16px;
+  margin-top: 24px;
 }
 
 main img {
-  width: 284px;
-  height: 284px;
+  width: calc(25% - 12px); /* 4 imagens por linha em desktop */
+  height: auto;
+  border-radius: 12px;
   object-fit: cover;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+  main img {
+    width: calc(33.33% - 10px); /* 3 imagens por linha */
+  }
+}
+
+@media (max-width: 768px) {
+  main img {
+    width: calc(50% - 8px); /* 2 imagens por linha */
+  }
+}
+
+@media (max-width: 480px) {
+  main img {
+    width: 100%; /* 1 imagem por linha em celular pequeno */
+  }
 }

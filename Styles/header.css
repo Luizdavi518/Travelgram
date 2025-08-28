@@ -1,42 +1,40 @@
-header {
+header { 
   padding-block: 32px 16px;
   font: var(--text-md);
-  
 }
 
 header .container {
-  display: column;
+  display: flex; /* corrigido */
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start; /* topo alinhado */
   width: 100%;
 }
 
 #profile {
   display: flex;
-  align-items: flex-start;  /* alinha verticalmente no topo */
-  justify-content: space-between; /* espalha texto e info para as extremidades */
-  gap: 32px; /* espaço entre foto, texto e info */
-  width: 100%; /* garante que ocupe toda a largura do container */
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  width: 100%;
 }
-
 
 #profile > div {
   max-width: 384px;
 }
 
-#profile h2 {
+#profile h3 {
   font: var(--text-lg);
   color: var(--text-color-primary);
   margin-bottom: 8px;
 }
 
 .profile-text {
-  max-width: 400px; /* largura da bio */
+  max-width: 400px;
 }
 
 #profile img {
-  width: 176px;
-  height: 76px;
+  width: 120px;   /* tamanho desktop */
+  height: auto;   /* mantém proporção */
   object-fit: cover;
   border-radius: 50%;
 }
@@ -44,12 +42,12 @@ header .container {
 /* lista de info ao lado do texto */
 #info {
   display: flex;
-  flex-direction: column; /* mantém os itens em coluna */
+  flex-direction: column;
   gap: 8px;
   list-style: none;
   padding: 0;
-  margin: 0; /* tira espaçamento extra */
-  margin-left: auto; /* empurra a lista pro outro lado da página */
+  margin: 0;
+  margin-left: auto; /* mantém a lista à direita */
   justify-content: center;
 }
 
@@ -62,4 +60,28 @@ header .container {
 #info img {
   width: 18px;
   height: 18px;
+}
+
+/* RESPONSIVIDADE: só reduzir tamanho, sem mudar layout */
+@media (max-width: 768px) {
+  #profile img {
+    width: 80px;
+  }
+
+  .profile-text h3 {
+    font-size: 16px;
+  }
+
+  .profile-text p {
+    font-size: 12px;
+  }
+
+  #info li {
+    font-size: 12px;
+  }
+
+  #info img {
+    width: 14px;
+    height: 14px;
+  }
 }

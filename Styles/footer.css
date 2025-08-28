@@ -2,11 +2,18 @@ footer {
   display: flex;
   gap: 24px;
   padding-block: 24px;
-
   font: 14px/150% var(--font-family);
 }
 
 footer span:nth-child(1) {
   margin-right: auto;
+}
 
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  footer {
+    gap: 12px;
+    font-size: 12px;
+    flex-wrap: wrap; /* permite quebrar linha se necessário */
+  }
 }
